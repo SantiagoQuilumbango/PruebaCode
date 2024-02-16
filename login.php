@@ -58,14 +58,14 @@
                         <h4 class="mb-2"></h4>
                         <p class="mb-4"></p>
 
-                        <form action="controllers/usuario.controllers.php" class="mb-3" method="POST">
+                        <form action="controllers/usuario.controllers.php?op=login" class="mb-3" method="POST">
                             <?php if (isset($_GET['op'])) {
                                 switch ($_GET['op']) {
                                     case "1":
                             ?>
                                         <div class="form-group">
                                             <div class="alert alert-danger">
-                                                El usaurio o la contraseña son incorrectos
+                                                El usuario o la contraseña son incorrectos
                                             </div>
                                         </div>
                                     <?php
@@ -97,7 +97,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                                <button class="btn btn-primary d-grid w-100" type="submit">Ingresar</button>
                             </div>
                         </form>
 

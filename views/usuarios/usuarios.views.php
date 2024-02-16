@@ -4,20 +4,30 @@
 
 <!-- Basic Bootstrap Table -->
 <div class="card">
-    <h5 class="card-header">Table Basic</h5>
+    <h5 class="card-header">Lista de Usuarios</h5>
     <div class="table-responsive text-nowrap">
         <table class="table">
             <thead>
                 <tr>
-                    <th>Project</th>
-                    <th>Client</th>
-                    <th>Users</th>
-                    <th>Status</th>
-                    <th>Actions</th>
+                    <th>#</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Sede</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody class="table-border-bottom-0">
-                <tr>
+            <tbody class="table-border-bottom-0" id="ListaUsuarios">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!--
+
+    <tr>
                     <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
                     <td>Albert Cook</td>
                     <td>
@@ -135,7 +145,5 @@
                         </div>
                     </td>
                 </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+
+ -->

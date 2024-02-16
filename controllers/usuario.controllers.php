@@ -2,7 +2,7 @@
 //error_reporting(0);
 /*TODO: Requerimientos */
 require_once('../config/sesiones.php');
-require_once("../models/Usuarios.models.php");
+require_once("../models/usuario.models.php");
 //require_once("../models/Accesos.models.php");
 $Usuarios = new Usuarios;
 //$Accesos = new Accesos;
@@ -61,7 +61,7 @@ switch ($_GET["op"]) {
 
         //TODO: Si las variables estab vacias rgersa con error
         if (empty($correo) or  empty($contrasenia)) {
-            header("Location:../index.php?op=2");
+            header("Location:../login.php?op=2");
             exit();
         }
 
@@ -70,13 +70,14 @@ switch ($_GET["op"]) {
             $datos = $Usuarios->login($correo, $contrasenia);
             $res = mysqli_fetch_assoc($datos);
         } catch (Throwable $th) {
-            header("Location:../index.php?op=1");
+            header("Location:../login.php?op=1");
             exit();
         }
         //TODO:Control de si existe el registro en la base de datos
         try {
             if (is_array($res) and count($res) > 0) {
-                if ((md5($contrasenia) == ($res["Contrasenia"]))) {
+                //if ((md5($contrasenia) == ($res["Contrasenia"]))) {
+                if ((($contrasenia) == ($res["Contrasenia"]))) {
                     //$datos2 = array();
                     // $datos2 = $Accesos->Insertar(date("Y-m-d H:i:s"), $res["idUsuarios"], 'ingreso');
 
@@ -89,14 +90,14 @@ switch ($_GET["op"]) {
 
 
 
-                    header("Location:../views/Dashboard/");
+                    header("Location:../views/home.php");
                     exit();
                 } else {
-                    header("Location:../index.php?op=1");
+                    header("Location:../login.php?op=1");
                     exit();
                 }
             } else {
-                header("Location:../index.php?op=1");
+                header("Location:../login.php?op=1");
                 exit();
             }
         } catch (Exception $th) {
