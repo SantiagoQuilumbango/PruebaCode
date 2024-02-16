@@ -1,7 +1,5 @@
 <?php require_once('../html/head2.php')  ?>
 
-
-
 <!-- Basic Bootstrap Table -->
 <div class="card">
     <h5 class="card-header">Lista de Usuarios</h5>
@@ -23,7 +21,9 @@
         </table>
     </div>
 </div>
+<?php require_once('../html/scripts2.php') ?>
 
+<script src="./usuarios.js"></script>
 
 <!--
 

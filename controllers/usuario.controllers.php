@@ -1,5 +1,5 @@
 <?php
-//error_reporting(0);
+error_reporting(0);
 /*TODO: Requerimientos */
 require_once('../config/sesiones.php');
 require_once("../models/usuario.models.php");
