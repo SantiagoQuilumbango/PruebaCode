@@ -62,14 +62,11 @@
             </a>
 
             <ul class="menu-sub">
+
                 <li class="menu-item">
-                    <a href="layouts-without-menu.html" class="menu-link">
-                        <div data-i18n="Without menu">Without menu</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
-                        <div data-i18n="Without navbar">Without navbar</div>
+                    <a href="usuarios/usuarios.views.php" target="base" class="menu-link">
+                        <?php $_SESSION['rutas'] = 'Usuarios'; ?>
+                        <div data-i18n="Without navbar">Usuarios</div>
                     </a>
                 </li>
                 <li class="menu-item">
