@@ -29,10 +29,11 @@ switch ($_GET["op"]) {
         $Nombres = $_POST["Nombres"];
         $Apellidos = $_POST["Apellidos"];
         $Correo = $_POST["Correo"];
-        $Contrasenia = $_POST["Contrasenia"];
-        $Roles_idRoles = $_POST["idRoles"];
+        $Contrasenia = $_POST["contrasenia"];
+        $SucursalId = $_POST["SucursalId"];
+        $RolId = $_POST["RolId"];
         $datos = array();
-        $datos = $Usuarios->Insertar($Nombres, $Apellidos, $Correo, $Contrasenia, $Roles_idRoles);
+        $datos = $Usuarios->Insertar($Nombres, $Apellidos, $Correo, $Contrasenia, $SucursalId, $RolId);
         echo json_encode($datos);
         break;
         /*TODO: Procedimiento para actualizar */

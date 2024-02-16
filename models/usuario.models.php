@@ -25,11 +25,12 @@ class Usuarios
         $con->close();
     }
     /*TODO: Procedimiento para insertar */
-    public function Insertar($Nombres, $Apellidos, $Correo, $Contrasenia, $idRoles)
+    public function Insertar($Nombres, $Apellidos, $Correo, $Contrasenia, $SucursalId, $idRoles)
     {
         $con = new ClaseConectar();
         $con = $con->ProcedimientoConectar();
-        $cadena = "INSERT into Usuarios(Nombres,Apellidos,Correo,Contrasenia) values ( '$Nombres', '$Apellidos', '$Correo', '$Contrasenia')";
+        $cadena = "INSERT into Usuarios(Nombres,Apellidos,Correo,Contrasenia, SucursalId) values ( '$Nombres', '$Apellidos', '$Correo', '$Contrasenia', $SucursalId)";
+
         if (mysqli_query($con, $cadena)) {
             $UsRoles = new Usuarios_Roles();
 

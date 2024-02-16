@@ -2,7 +2,7 @@
 
 <!-- Basic Bootstrap Table -->
 <div class="card">
-    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#ModalUsuarios">Nuevo Usuario</button>
+    <button type="button" class="btn btn-outline-secondary" onclick="sucursales(); roles()" data-bs-toggle="modal" data-bs-target="#ModalUsuarios">Nuevo Usuario</button>
 
 
     <h5 class="card-header">Lista de Usuarios</h5>
@@ -48,7 +48,12 @@
                     </div>
                     <div class="form-group">
                         <label for="Nombres">Sede</label>
-                        <select id="SucursalId" class="form-control">
+                        <select id="SucursalId" name="SucursalId" class="form-control">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Nombres">Rol</label>
+                        <select id="RolId" name="RolId" class="form-control">
                         </select>
                     </div>
                     <div class="form-group">
@@ -61,7 +66,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </form>
