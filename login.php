@@ -97,7 +97,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <button class="btn btn-primary d-grid w-100" type="submit">Ingresar</button>
+                                <button class="btn btn-outline-primary d-grid w-100" type="submit">Ingresar</button>
                             </div>
                         </form>
 
