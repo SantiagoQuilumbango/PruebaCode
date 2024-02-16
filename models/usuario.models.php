@@ -69,7 +69,7 @@ class Usuarios
         $con->close();
     }
 
-    public function login($Correo, $Contrasenia)
+    public function login($Correo)
     {
         try {
             $con = new ClaseConectar();

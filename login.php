@@ -58,18 +58,40 @@
                         <h4 class="mb-2"></h4>
                         <p class="mb-4"></p>
 
-                        <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
+                        <form action="controllers/usuario.controllers.php" class="mb-3" method="POST">
+                            <?php if (isset($_GET['op'])) {
+                                switch ($_GET['op']) {
+                                    case "1":
+                            ?>
+                                        <div class="form-group">
+                                            <div class="alert alert-danger">
+                                                El usaurio o la contraseña son incorrectos
+                                            </div>
+                                        </div>
+                                    <?php
+
+                                        break;
+                                    case '2':
+                                    ?>
+                                        <div class="form-group">
+                                            <div class="alert alert-danger">
+                                                Por favor llene las casillas
+                                            </div>
+                                        </div>
+                            <?php
+                                }
+                            } ?>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email or Username</label>
-                                <input type="text" class="form-control" id="email" name="email-username" placeholder="Enter your email or username" autofocus />
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="text" class="form-control" id="correo" name="correo" placeholder="Ingrese su correo elctrónico" autofocus />
                             </div>
                             <div class="mb-3 form-password-toggle">
                                 <div class="d-flex justify-content-between">
-                                    <label class="form-label" for="password">Password</label>
+                                    <label class="form-label" for="password">Contraseña</label>
 
                                 </div>
                                 <div class="input-group input-group-merge">
-                                    <input type="password" id="password" class="form-control" name="password" placeholder="" aria-describedby="password" />
+                                    <input type="password" id="contrasenia" class="form-control" name="contrasenia" placeholder="*************" aria-describedby="password" />
                                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                                 </div>
                             </div>

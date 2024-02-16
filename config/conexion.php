@@ -1,12 +1,8 @@
 <?php
 class ClaseConectar
 {
-
     public $conexion;
     protected $db;
-
-
-
     private $host = "localhost";
     private $usu = "root";
     private $clave = "root";

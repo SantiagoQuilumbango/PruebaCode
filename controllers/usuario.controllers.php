@@ -3,9 +3,9 @@
 /*TODO: Requerimientos */
 require_once('../config/sesiones.php');
 require_once("../models/Usuarios.models.php");
-require_once("../models/Accesos.models.php");
+//require_once("../models/Accesos.models.php");
 $Usuarios = new Usuarios;
-$Accesos = new Accesos;
+//$Accesos = new Accesos;
 switch ($_GET["op"]) {
         /*TODO: Procedimiento para listar todos los registros */
     case 'todos':
@@ -77,8 +77,8 @@ switch ($_GET["op"]) {
         try {
             if (is_array($res) and count($res) > 0) {
                 if ((md5($contrasenia) == ($res["Contrasenia"]))) {
-                    $datos2 = array();
-                    $datos2 = $Accesos->Insertar(date("Y-m-d H:i:s"), $res["idUsuarios"], 'ingreso');
+                    //$datos2 = array();
+                    // $datos2 = $Accesos->Insertar(date("Y-m-d H:i:s"), $res["idUsuarios"], 'ingreso');
 
                     $_SESSION["idUsuarios"] = $res["idUsuarios"];
                     $_SESSION["Usuarios_Nombres"] = $res["Nombres"];
