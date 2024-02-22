@@ -1,6 +1,6 @@
 <?php
 require_once('../config/sesiones.php');
-if ($_SESSION['Rol'] == 'ADMINISTRADOR') {
+if ($_SESSION['Rol'] == 'Administrador') {
     $_SESSION['rutas'] = 'Dashboard'
 ?>
 
